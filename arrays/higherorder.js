@@ -65,3 +65,7 @@ const mycoding = [
     languagefilename: "py",
   },
 ];
+mycoding.forEach((items) => {
+  console.log(item.languagefilename);
+  
+});
