@@ -8,69 +8,99 @@
 // console.log("subraction" , x-y);
 // console.log("Modulo division" , x%y);
 
-
 // logical operators
 // AND  x  y = x * y &&
 // OR  x y = x + y ||
 // x = -x  ~
 
-
-// shortcircuiting 
+// shortcircuiting
 // false values in js  - > null , undefined , "" , 0 , -0 , NAN
 
 console.log(6 && 7);
 // In JavaScript, && returns the first falsy value it finds. If all values are truthy, it returns the last value.
 
-// Bitwise operators 
+// Bitwise operators
 
-
-// == and the === 
+// == and the ===
 // Abstract equality ==
-// strict equality === 
+// strict equality ===
 
-// then == also checks the type on the both sides 
-// if we use the ==  then after getting the type on the both sides and if the type is same then it calls === 
-// if the type is not same then the type conversion occurs (coersion) and then comparision is done 
+// then == also checks the type on the both sides
+// if we use the ==  then after getting the type on the both sides and if the type is same then it calls ===
+// if the type is not same then the type conversion occurs (coersion) and then comparision is done
 
+// where as for the === it will checks the type of both the operators
+// if types are different it rettrun the false
+// if types are same then value comparisn will happens
 
-
-// where as for the === it will checks the type of both the operators 
-// if types are different it rettrun the false 
-// if types are same then value comparisn will happens 
-
-
-console.log(1===1); //true 
-console.log("1"===1); // false 
-console.log(1 == 1); // true 
+console.log(1 === 1); //true
+console.log("1" === 1); // false
+console.log(1 == 1); // true
 console.log("1" == 1); // true
-// if one_type is string and other is int here js make the string to number and then it compares if compares are equal then it will compare and then return the value 
+// if one_type is string and other is int here js make the string to number and then it compares if compares are equal then it will compare and then return the value
 
-// to check the typeof any thing we usually chekc the typeof operator 
+// to check the typeof any thing we usually chekc the typeof operator
 
-// solving the roots of the quadratic equation 
+// solving the roots of the quadratic equation
 
-function quadratic_eq_solve(a,b,c){
-    // ax^2 + bx + c
-    let square_root_value = Math.sqrt(b**2 - 4*a*c)
-    let root1 = (-b + square_root_value) / (2*a) 
-    let root2 = (-b - square_root_value ) / (2*a)
+function quadratic_eq_solve(a, b, c) {
+  // ax^2 + bx + c
+  let square_root_value = Math.sqrt(b ** 2 - 4 * a * c);
+  let root1 = (-b + square_root_value) / (2 * a);
+  let root2 = (-b - square_root_value) / (2 * a);
 
-    console.log(root1, root2);    
+  console.log(root1, root2);
 }
 
-quadratic_eq_solve(2,5,3)
+quadratic_eq_solve(2, 5, 3);
 
+// string
 
-// string 
-
-let a = "abc"
+let a = "abc";
 console.log(a);
 // string literal
 
-
 let new_way = new String("abc");
 // also
-let another_new_way = String("abc")
+let another_new_way = String("abc");
 console.log(new_way);
 
 // output -> [String: 'abc']
+
+console.log((1).toString());
+
+// palindrome in string if it is a number
+
+let number = 123321;
+// find the number is palindrome or not
+
+// initially try to conver this number into the string
+let str1 = "" + number;
+console.log(str1);
+console.log(typeof str1); // string
+i = 0;
+j = str1.length - 1;
+while (str1[i] <= str1[j]) {
+  if (str1[i] == str1[j]) {
+    i++;
+    j--;
+  }
+}
+
+// DNF algorithm
+
+let arr = [1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0];
+i = 0;
+j = arr.length - 1;
+while (i<j) {
+  if (arr[i] == 1) {
+    temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] =temp;
+    j--;
+  }
+  else{
+    i++
+  }
+}
+console.log(arr);

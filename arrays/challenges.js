@@ -20,6 +20,9 @@ console.log(CitiesVisited);
 let PopularTeas = ["Green Tea", "Oolang Tea", " Chai"];
 let softCopyTeas = PopularTeas;
 console.log(softCopyTeas);
+softCopyTeas[2]= "Normal Masala Chai"
+console.log(PopularTeas);
+
 // the above is the soft copy it means softcpoy tes referes to the address of the popularteas hence if there are any changes in the popularteas there will be a change in the softcopy teas 
 
 // ++++++++++++++++++++++++++++++++++++++++++++

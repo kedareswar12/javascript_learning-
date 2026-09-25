@@ -57,11 +57,19 @@ console.log(citypopulations);
 let teaarray = ["earl grey", "green tea", "chai", "OOlang tea"];
 let availTeas = [];
 
-teaarray.forEach((tea) => {
-  availTeas.push(tea);
-  if(tea == "chai"){
-    return ;
-  }
-});
+// teaarray.forEach((tea) => {
+//   availTeas.push(tea);
+//   if(tea == "chai"){
+//     return ;
+//   }
+// });
 
+// console.log(availTeas);
+
+
+teaarray.forEach((tea)=>{
+  availTeas.push(tea);
+  if (tea == "OOlang tea")
+    availTeas[tea] == "Orion tea"
+})
 console.log(availTeas);
